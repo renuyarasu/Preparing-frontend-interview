@@ -3,10 +3,13 @@ console.clear();
 
 // 02. Variable Declarations - const vs let vs const
 
+// Problem 03
+var a = 10;
 function exercise() {
-    let name = 'VedaGna';
-    let name = 'Yarasu';
-    console.log(name);
+    a = 20;
+    console.log(a);
 }
 exercise()
-// SyntaxError: Identifier 'name' has already been declared
+console.log(a);
+
+// ** Functions can access and change variables in their outerscope.
