@@ -8,6 +8,8 @@ console.clear();
 
 function hoist() {
     console.log(name);
-    var name;
+    var name = 'VedaGna';
 }
 hoist();
+
+// ** Only variable declarations are hoisted to the top and not variable initializations.
