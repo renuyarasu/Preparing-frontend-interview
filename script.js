@@ -1,16 +1,16 @@
 // Learn
 console.clear();
 
-// 02. Variable Declarations - var vs let vs const
+// 02. Variable Declarations - const vs let vs const
 
-// Variable Declarations 
+// Const Declarations 
 
 function addNumbers() {
-    var a = 10;
-    var b = 20;
-    var flag = true;
+    const a = 10;
+    const b = 20;
+    const flag = true;
     if (flag) {
-        var sum = a + b;
+        const sum = a + b;
         console.log('Inside: ', sum);
     }
     console.log('Outside: ', sum);
