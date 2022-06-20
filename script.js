@@ -3,16 +3,11 @@ console.clear();
 
 // 02. Variable Declarations - const vs let vs const
 
-// Const Declarations 
+// Hoisting
+// Ex: 01 -  Variable Declarations
 
-function addNumbers() {
-    const a = 10;
-    const b = 20;
-    const flag = true;
-    if (flag) {
-        const sum = a + b;
-        console.log('Inside: ', sum);
-    }
-    console.log('Outside: ', sum);
+function hoist() {
+    var name;
+    console.log(name);
 }
-addNumbers();
+hoist();
