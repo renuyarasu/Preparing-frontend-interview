@@ -3,13 +3,16 @@ console.clear();
 
 // 02. Variable Declarations - const vs let vs const
 
-// Problem 03
-var a = 10;
-function exercise() {
-    a = 20;
-    console.log(a);
-}
-exercise()
-console.log(a);
+// Problem 04
 
-// ** Functions can access and change variables in their outerscope.
+function profile() {
+    fName: 'VedaGna';
+    lName: 'Yarasu';
+}
+profile.fName = 'Gnapika';
+console.log(profile.fName);
+
+/* 
+01. Even through an object is declared with const, yiou can still mutate its properties
+02. You can't ressign a value like an empty object to the profile variable 
+03. profile= {} */
