@@ -2,29 +2,25 @@
 console.clear();
 // Closures
 
-function square(num) {
-    return num * num;
-}
-
-function memoizedSquare() {
-    let cache = {};
-    return function optimizedSquare(num) {
-        if (num in cache) {
+function memoize(callback) {
+    let cache = {}
+    return function (...args) {
+        const key = args.toString()
+        if (key in cache) {
             console.log('Returning from cache')
-            return cache[num]
+            return cache[key]
         } else {
             console.log('Computing Square')
-            const result = square(num)
-            cache[num] = result
+            const result = callback(...args)
+            cache[key] = result
             return result
         }
-
     }
 }
+function add(a, b) {
+    return a + b;
+}
 
-const memoSquare = memoizedSquare();
-console.log(memoSquare(2)); // Computing Square
-console.log(memoSquare(2)); // Returning from cache
-
-console.log(memoSquare(5)); // Computing Square
-console.log(memoSquare(5)); // Returning from cache
+const memoizedAdd = memoize(add);
+console.log(memoizedAdd(2, 4)); // Computing Square
+console.log(memoizedAdd(2, 4)); // Returning from cache
