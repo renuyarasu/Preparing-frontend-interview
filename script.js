@@ -9,6 +9,13 @@ function outer() {
         counter++;
         console.log(counter);
     }
-    inner();
+    return inner;
 }
-outer(); // 1
+let fn = outer();
+fn(); // 1
+fn(); // 1
+fn(); // 1
+fn(); // 1
+fn(); // 1
+fn(); // 1
+fn(); // 1
