@@ -5,6 +5,6 @@ console.clear();
 
 function example() {
     const a = 10;
-    console.log(a);
 }
 example();
+console.log(a);
