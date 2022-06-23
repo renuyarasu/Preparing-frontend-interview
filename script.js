@@ -1,7 +1,10 @@
 // Learn
 console.clear();
 
-// Scope
+// Function Scope
 
-const a = 10;
-console.log(a); // 10
+function example() {
+    const a = 10;
+    console.log(a);
+}
+example();
